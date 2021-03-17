@@ -8,7 +8,6 @@ export const SidebarWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   padding: 30px 0;
-  border-right: 1px solid ${({ theme }) => theme.colors.darkPrimary};
   background-color: ${({ theme }) => theme.colors.primary};
 `;
 
