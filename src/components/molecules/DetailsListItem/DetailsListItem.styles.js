@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {theme} from 'assets/styles/theme';
+import { theme } from 'assets/styles/theme';
 
 export const DetailsItem = styled.li`
   &:not(:first-child) {

@@ -4,11 +4,8 @@ import { ViewWrapper, ViewContainer } from './Wrapper.styles';
 const Wrapper = ({ children }) => {
   return (
     <ViewWrapper>
-      <ViewContainer>
-        {children}
-      </ViewContainer>
+      <ViewContainer>{children}</ViewContainer>
     </ViewWrapper>
-
   );
 };
 

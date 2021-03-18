@@ -9,4 +9,4 @@ export const ColumnItem = styled.div`
   flex-direction: column;
   border-radius: 15px;
   padding: 20px;
-`
+`;

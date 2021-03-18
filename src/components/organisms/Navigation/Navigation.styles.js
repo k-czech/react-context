@@ -19,7 +19,7 @@ export const Logo = styled.div`
   align-items: center;
   margin-bottom: 30px;
   background-color: ${({ theme }) => theme.colors.secondary};
-  
+
   h1 {
     font-size: 15px;
     font-weight: 700;
@@ -40,18 +40,18 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
   margin: 10px 20px 10px auto;
   color: ${({ theme }) => theme.colors.white};
   position: relative;
-  transition: opacity .3s ease;
+  transition: opacity 0.3s ease;
 
   &.${activeClassName}, &:hover {
     opacity: 0.8;
-    
+
     &::after {
       opacity: 1;
     }
   }
-  
+
   &::after {
-    content: "";
+    content: '';
     width: 18px;
     height: 3px;
     background-color: ${({ theme }) => theme.colors.white};
@@ -60,6 +60,6 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
     transform: translateY(-50%);
     right: -25px;
     opacity: 0;
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
   }
-`
+`;

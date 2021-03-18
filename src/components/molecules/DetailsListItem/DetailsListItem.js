@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {DetailsInfo, DetailsItem} from './DetailsListItem.styles';
-import {theme} from 'assets/styles/theme';
+import { DetailsInfo, DetailsItem } from './DetailsListItem.styles';
+import { theme } from 'assets/styles/theme';
 
-const DetailsListItem = ({ name, value}) => {
+const DetailsListItem = ({ name, value }) => {
   return (
     <DetailsItem>
-      <DetailsInfo>{ name }: </DetailsInfo>
-      <DetailsInfo color={theme.colors.black}>{ value }</DetailsInfo>
+      <DetailsInfo>{name}: </DetailsInfo>
+      <DetailsInfo color={theme.colors.black}>{value}</DetailsInfo>
     </DetailsItem>
   );
 };
@@ -15,6 +15,6 @@ const DetailsListItem = ({ name, value}) => {
 DetailsListItem.propTypes = {
   key: PropTypes.string,
   value: PropTypes.string,
-}
+};
 
 export default DetailsListItem;

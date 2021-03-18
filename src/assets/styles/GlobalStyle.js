@@ -18,4 +18,4 @@ export const GlobalStyle = createGlobalStyle`
   a, button {
     font-family: 'Roboto', sans-serif;
   }
-`
+`;
