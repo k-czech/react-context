@@ -6,6 +6,7 @@ import { theme } from 'assets/styles/theme';
 import MainTemplate from 'components/templates/MainTemplate';
 import Dashboard from './Dashboard';
 import AddPlayers from './AddPlayers';
+import PlayersProvider from 'providers/PlayersProvider';
 
 const Root = () => {
   return (
@@ -13,14 +14,16 @@ const Root = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <MainTemplate>
-          <Switch>
-            <Route exact path="/">
-              <Dashboard />
-            </Route>
-            <Route path="/add-players">
-              <AddPlayers />
-            </Route>
-          </Switch>
+          <PlayersProvider>
+            <Switch>
+              <Route exact path="/">
+                <Dashboard />
+              </Route>
+              <Route path="/add-players">
+                <AddPlayers />
+              </Route>
+            </Switch>
+          </PlayersProvider>
         </MainTemplate>
       </ThemeProvider>
     </Router>
