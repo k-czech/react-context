@@ -10,7 +10,7 @@ import { PlayersContext } from 'providers/PlayersProvider';
 import DeleteButton from 'components/atoms/DeleteButton/DeleteButton';
 
 const Dashboard = () => {
-  const { players, handleDeletePlayers } = useContext(PlayersContext);
+  const { players, deletePlayers } = useContext(PlayersContext);
   return (
     <Wrapper>
       <Row>
@@ -20,7 +20,7 @@ const Dashboard = () => {
               <Avatar />
               <Title>{name}</Title>
               <DetailsList age={age} born={born} country={country} position={position} team={team} />
-              <DeleteButton onClick={() => handleDeletePlayers(index)} />
+              <DeleteButton onClick={() => deletePlayers(index)} />
             </ColumnItem>
           </ColumnFourth>
         ))}

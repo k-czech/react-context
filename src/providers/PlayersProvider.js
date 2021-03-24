@@ -3,13 +3,27 @@ import { players as playersData } from 'data/players';
 
 export const PlayersContext = createContext({
   players: [],
-  handleDeletePlayers: () => {},
+  handleAddPlayer: () => {},
+  deletePlayers: () => {},
 });
 
 const PlayersProvider = ({ children }) => {
   const [players, setPlayers] = useState(playersData);
 
-  const handleDeletePlayers = (idx) => {
+  const handleAddPlayer = (value) => {
+    const newPlayer = {
+      name: value.name,
+      age: value.age,
+      born: value.born,
+      country: value.country,
+      position: value.position,
+      team: value.team,
+      amount: value.amount,
+    };
+    setPlayers([newPlayer, ...players]);
+  };
+
+  const deletePlayers = (idx) => {
     const filteredPlayers = players.filter((val, id) => id !== idx);
     setPlayers(filteredPlayers);
   };
@@ -18,7 +32,8 @@ const PlayersProvider = ({ children }) => {
     <PlayersContext.Provider
       value={{
         players,
-        handleDeletePlayers,
+        handleAddPlayer,
+        deletePlayers,
       }}
     >
       {children}
